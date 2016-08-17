@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Custom suite]" parallel="none">
+  <test name="APIautomation(failed)" parallel="none">
+    <classes>
+      <class name="TestSuite.TestScriptLogin">
+        <methods>
+          <include name="setupTest"/>
+          <include name="SuccessfulLogin"/>
+        </methods>
+      </class> <!-- TestSuite.TestScriptLogin -->
+    </classes>
+  </test> <!-- APIautomation(failed) -->
+</suite> <!-- Failed suite [Custom suite] -->

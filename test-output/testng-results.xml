@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+    <line>
+      <![CDATA[{"auth_cookie_code":"64a17c89-9914-4630-98aa-03804560bf1a","legacy_o2at_code":"35cd7d71-dfef-4324-bf32-594479e8e079","legacy_portal_account_cookie_info":{"master_portal_bfid":"130000000272551","master_portal_id":"banky","master_portal_display_name":"richard"},"irrelevant_proof_added":false}]]>
+    </line>
+    <line>
+      <![CDATA[{"auth_cookie_code":"e8d093c0-77c5-4f1d-97fb-62fbc64359e9","legacy_o2at_code":"798d3200-f611-45b6-a864-7df1c3a5be35","legacy_portal_account_cookie_info":{"master_portal_bfid":"9990000001","master_portal_id":"fun-notverified","master_portal_display_name":"fun-notverified"},"irrelevant_proof_added":false}]]>
+    </line>
+  </reporter-output>
+  <suite name="Custom suite" duration-ms="2192" started-at="2016-08-16T10:21:52Z" finished-at="2016-08-16T10:21:55Z">
+    <groups>
+    </groups>
+    <test name="APIautomation" duration-ms="2192" started-at="2016-08-16T10:21:52Z" finished-at="2016-08-16T10:21:55Z">
+      <class name="TestSuite.TestScriptLogin">
+        <test-method status="PASS" signature="setupTest()[pri:0, instance:TestSuite.TestScriptLogin@3ab39c39]" name="setupTest" is-config="true" duration-ms="524" started-at="2016-08-16T11:21:52Z" finished-at="2016-08-16T11:21:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupTest -->
+        <test-method status="PASS" signature="SuccessfulLogin(java.lang.String, java.lang.String)[pri:0, instance:TestSuite.TestScriptLogin@3ab39c39]" name="SuccessfulLogin" duration-ms="1557" started-at="2016-08-16T11:21:53Z" data-provider="userCredential" finished-at="2016-08-16T11:21:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[banky@hotmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[{"auth_cookie_code":"64a17c89-9914-4630-98aa-03804560bf1a","legacy_o2at_code":"35cd7d71-dfef-4324-bf32-594479e8e079","legacy_portal_account_cookie_info":{"master_portal_bfid":"130000000272551","master_portal_id":"banky","master_portal_display_name":"richard"},"irrelevant_proof_added":false}]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- SuccessfulLogin -->
+        <test-method status="PASS" signature="SuccessfulLogin(java.lang.String, java.lang.String)[pri:0, instance:TestSuite.TestScriptLogin@3ab39c39]" name="SuccessfulLogin" duration-ms="92" started-at="2016-08-16T11:21:54Z" data-provider="userCredential" finished-at="2016-08-16T11:21:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fun-notverified@o2.co.uk]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[{"auth_cookie_code":"e8d093c0-77c5-4f1d-97fb-62fbc64359e9","legacy_o2at_code":"798d3200-f611-45b6-a864-7df1c3a5be35","legacy_portal_account_cookie_info":{"master_portal_bfid":"9990000001","master_portal_id":"fun-notverified","master_portal_display_name":"fun-notverified"},"irrelevant_proof_added":false}]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- SuccessfulLogin -->
+      </class> <!-- TestSuite.TestScriptLogin -->
+    </test> <!-- APIautomation -->
+  </suite> <!-- Custom suite -->
+</testng-results>

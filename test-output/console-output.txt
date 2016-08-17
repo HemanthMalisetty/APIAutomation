@@ -1,0 +1,10 @@
+[TestNG] Running:
+  /home/ee/.IntelliJIdea14/system/temp-testng-customsuite.xml
+
+{"auth_cookie_code":"64a17c89-9914-4630-98aa-03804560bf1a","legacy_o2at_code":"35cd7d71-dfef-4324-bf32-594479e8e079","legacy_portal_account_cookie_info":{"master_portal_bfid":"130000000272551","master_portal_id":"banky","master_portal_display_name":"richard"},"irrelevant_proof_added":false}
+
+===============================================
+Custom suite
+Total tests run: 2, Failures: 0, Skips: 0
+===============================================
+
