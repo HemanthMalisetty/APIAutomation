@@ -58,7 +58,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Custom_suite">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -101,12 +101,12 @@
                     <div class="method-list-content passed suite-Custom_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Custom_suite" title="TestSuite.TestScriptLogin" hash-for-method="SuccessfulLogin(banky@hotmail.com, Password1)">SuccessfulLogin(banky@hotmail.com, Password1)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Custom_suite" title="TestSuite.VisualIVRTestSuite" hash-for-method="HappyPathEndtoEndScenario(447881222333)">HappyPathEndtoEndScenario(447881222333)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Custom_suite" title="TestSuite.TestScriptLogin" hash-for-method="SuccessfulLogin(fun-notverified@o2.co.uk, Password1)">SuccessfulLogin(fun-notverified@o2.co.uk, Password1)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Custom_suite" title="TestSuite.VisualIVRTestSuite" hash-for-method="HappyPathEndtoEndScenario(447992872782)">HappyPathEndtoEndScenario(447992872782)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Custom_suite -->
@@ -124,23 +124,23 @@
           <div class="suite-Custom_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">TestSuite.TestScriptLogin</span>
+              <span class="class-name">TestSuite.VisualIVRTestSuite</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="SuccessfulLogin(banky@hotmail.com, Password1)">
-                  </a> <!-- SuccessfulLogin(banky@hotmail.com, Password1) -->
-                  <span class="method-name">SuccessfulLogin</span>
-                  <span class="parameters">(banky@hotmail.com, Password1)</span>
+                  <a name="HappyPathEndtoEndScenario(447881222333)">
+                  </a> <!-- HappyPathEndtoEndScenario(447881222333) -->
+                  <span class="method-name">HappyPathEndtoEndScenario</span>
+                  <span class="parameters">(447881222333)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="SuccessfulLogin(fun-notverified@o2.co.uk, Password1)">
-                  </a> <!-- SuccessfulLogin(fun-notverified@o2.co.uk, Password1) -->
-                  <span class="method-name">SuccessfulLogin</span>
-                  <span class="parameters">(fun-notverified@o2.co.uk, Password1)</span>
+                  <a name="HappyPathEndtoEndScenario(447992872782)">
+                  </a> <!-- HappyPathEndtoEndScenario(447992872782) -->
+                  <span class="method-name">HappyPathEndtoEndScenario</span>
+                  <span class="parameters">(447992872782)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -156,12 +156,18 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Custom suite&quot; parallel=&quot;none&quot;&gt;
   &lt;test name=&quot;APIautomation&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;test&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TestSuite.TestScriptLogin&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;SuccessfulLogin&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- TestSuite.TestScriptLogin --&gt;
+      &lt;class name=&quot;TestSuite.TestScriptAsset&quot;/&gt;
+      &lt;class name=&quot;SampleTestWithTestNG&quot;/&gt;
+      &lt;class name=&quot;TestSuite.VisualIVRTestSuite&quot;/&gt;
+      &lt;class name=&quot;TestFrameWork.BaseTestScript&quot;/&gt;
+      &lt;class name=&quot;TestSuite.TestScriptLogin&quot;/&gt;
+      &lt;class name=&quot;TestFrameWork.TestDataProvider&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- APIautomation --&gt;
 &lt;/suite&gt; &lt;!-- Custom suite --&gt;
@@ -175,7 +181,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">APIautomation (1 class)</span>
+                <span class="test-name">APIautomation (6 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -185,6 +191,14 @@
             <span class="header-content">Groups for Custom suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">test</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">HappyPathEndtoEndScenario</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Custom_suite" class="panel">
@@ -203,18 +217,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'SuccessfulLogin')
-data.setCell(0, 2, 'TestSuite.TestScriptLogin')
-data.setCell(0, 3, 1557);
+data.setCell(0, 1, 'HappyPathEndtoEndScenario')
+data.setCell(0, 2, 'TestSuite.VisualIVRTestSuite')
+data.setCell(0, 3, 1793);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'SuccessfulLogin')
-data.setCell(1, 2, 'TestSuite.TestScriptLogin')
-data.setCell(1, 3, 92);
+data.setCell(1, 1, 'HappyPathEndtoEndScenario')
+data.setCell(1, 2, 'TestSuite.VisualIVRTestSuite')
+data.setCell(1, 3, 287);
 window.suiteTableData['Custom_suite']= { tableData: data, tableDiv: 'times-div-Custom_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Custom_suite">
               </div> <!-- times-div-Custom_suite -->
             </div> <!-- times-div -->
@@ -226,24 +240,72 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">SuccessfulLogin(banky@hotmail.com, Password1)</span>
+              <span class="reporter-method-name">HappyPathEndtoEndScenario(447881222333)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">{"auth_cookie_code":"64a17c89-9914-4630-98aa-03804560bf1a","legacy_o2at_code":"35cd7d71-dfef-4324-bf32-594479e8e079","legacy_portal_account_cookie_info":{"master_portal_bfid":"130000000272551","master_portal_id":"banky","master_portal_display_name":"richard"},"irrelevant_proof_added":false}</span>
+                <span class="reporter-method-output">{"da_token":"de88ac05-7e1d-469d-9ec6-8e1868eda319"}</span>
+                <span class="reporter-method-output">{"transfer_session_id":"fbda5157-46c0-4192-8c48-1d66b0ba8ec6"}</span>
+                <span class="reporter-method-output">REQUEST: </span>
+                <span class="reporter-method-output">RESPONSE: </span>
+                <span class="reporter-method-output">447881222333 -- Hi singlepaymandpayg,
+
+Follow link to sign in to My O2 account.
+https://localhost.o2.co.uk:8443/credhandler/tinyurl/redeem/id1
+
+If you did not authorise this, please contact O2.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">SuccessfulLogin(fun-notverified@o2.co.uk, Password1)</span>
+              <span class="reporter-method-name">HappyPathEndtoEndScenario(447992872782)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">{"auth_cookie_code":"e8d093c0-77c5-4f1d-97fb-62fbc64359e9","legacy_o2at_code":"798d3200-f611-45b6-a864-7df1c3a5be35","legacy_portal_account_cookie_info":{"master_portal_bfid":"9990000001","master_portal_id":"fun-notverified","master_portal_display_name":"fun-notverified"},"irrelevant_proof_added":false}</span>
+                <span class="reporter-method-output">{"da_token":"4d52cd5b-802b-4252-9858-97f8e3e4a569"}</span>
+                <span class="reporter-method-output">{"transfer_session_id":"80c86019-131b-446b-9b60-fecd751299ff"}</span>
+                <span class="reporter-method-output">REQUEST: </span>
+                <span class="reporter-method-output">RESPONSE: </span>
+                <span class="reporter-method-output">447992872782 -- Hi singlepaymandpayg,
+
+Follow link to sign in to My O2 account.
+https://localhost.o2.co.uk:8443/credhandler/tinyurl/redeem/id1
+
+If you did not authorise this, please contact O2.</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Custom_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestSuite.VisualIVRTestSuite</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">CreateTokenforVerifiedCustomer</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">SampleTestWithTestNG</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">testLogin</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestSuite.TestScriptAsset</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">testGetPAYMAssetsUsingPathParam</span>
+                <br/>
+                <span class="ignored-method-name">testGetAllAssets</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestSuite.TestScriptLogin</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">SuccessfulLogin</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Custom_suite" class="panel">
@@ -252,18 +314,46 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestSuite.TestScriptLogin</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setupTest</span>
+              <div class="chronological-class-name">TestSuite.VisualIVRTestSuite</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">SuccessfulLogin(banky@hotmail.com, Password1)</span>
-                <span class="method-start">531 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">handleTestMethodName(public void TestSuite.VisualIVRTestSuite.HappyPathEndtoEndScenario(java.lang.String))</span>
+                <span class="method-start">5 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTinyurlstub</span>
+                <span class="method-start">6 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">SuccessfulLogin(fun-notverified@o2.co.uk, Password1)</span>
-                <span class="method-start">2089 ms</span>
+                <span class="method-name">HappyPathEndtoEndScenario(447881222333)</span>
+                <span class="method-start">1321 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">3115 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">handleTestMethodName(public void TestSuite.VisualIVRTestSuite.HappyPathEndtoEndScenario(java.lang.String))</span>
+                <span class="method-start">3225 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setupTinyurlstub</span>
+                <span class="method-start">3225 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">HappyPathEndtoEndScenario(447992872782)</span>
+                <span class="method-start">3242 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">3531 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">teardown</span>
+                <span class="method-start">3533 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

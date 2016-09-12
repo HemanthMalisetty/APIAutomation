@@ -16,7 +16,7 @@ public class SampleTestWithTestNG {
     public void testLogin(){
         RestAssured.useRelaxedHTTPSValidation();
 
-        Map<String, Object> jsonAsMap = new HashMap<String, Object>();
+        Map<String, Object> jsonAsMap = new HashMap<>();
         jsonAsMap.put("preferred_username", "arvind3222@mailinator.com");
         jsonAsMap.put("password", "Password123");
 

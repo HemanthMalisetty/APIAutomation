@@ -12,5 +12,7 @@ dependencies {
     compile 'io.rest-assured:rest-assured:3.0.0'
     compile group: 'org.testng', name: 'testng', version: '6.8.8'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.0'
+    compile 'com.pyruby:java-stub-server:0.14'
+    compile "org.json:json:20160212"
 
 }

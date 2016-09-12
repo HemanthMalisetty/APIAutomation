@@ -2,13 +2,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Custom suite]" parallel="none">
   <test name="APIautomation(failed)" parallel="none">
+    <groups>
+      <run>
+        <include name="test"/>
+      </run>
+    </groups>
     <classes>
-      <class name="TestSuite.TestScriptLogin">
+      <class name="TestSuite.VisualIVRTestSuite">
         <methods>
-          <include name="setupTest"/>
-          <include name="SuccessfulLogin"/>
+          <include name="handleTestMethodName"/>
+          <include name="setupTinyurlstub"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="HappyPathEndtoEndScenario"/>
         </methods>
-      </class> <!-- TestSuite.TestScriptLogin -->
+      </class> <!-- TestSuite.VisualIVRTestSuite -->
     </classes>
   </test> <!-- APIautomation(failed) -->
 </suite> <!-- Failed suite [Custom suite] -->
