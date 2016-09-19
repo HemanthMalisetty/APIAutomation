@@ -8,15 +8,19 @@
       </run>
     </groups>
     <classes>
-      <class name="TestSuite.VisualIVRTestSuite">
+      <class name="TestSuite.O2OPENAssetTestSuite">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- TestSuite.O2OPENAssetTestSuite -->
+      <class name="TestSuite.PushNotificationAssetTestSuite">
         <methods>
           <include name="handleTestMethodName"/>
-          <include name="setupTinyurlstub"/>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="HappyPathEndtoEndScenario"/>
+          <include name="setupTest"/>
+          <include name="CreatePUSHNOTIFICATIONasset" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- TestSuite.VisualIVRTestSuite -->
+      </class> <!-- TestSuite.PushNotificationAssetTestSuite -->
     </classes>
   </test> <!-- APIautomation(failed) -->
 </suite> <!-- Failed suite [Custom suite] -->

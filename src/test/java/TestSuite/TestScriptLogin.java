@@ -21,9 +21,9 @@ import static io.restassured.RestAssured.given;
 public class TestScriptLogin extends BaseTestScript {
 
 
-    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {"local"})
-    public void SuccessfulLogin(String username, String password){
-        Setup.setupAuthServerURL();
+    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {"ref","local"})
+    public void SuccessfulLogin(String env, String username, String password){
+        Setup.setupAuthServerURL(env);
 
         Map<String, Object> jsonAsMap = new HashMap<>();
         jsonAsMap.put("preferred_username", username);
@@ -39,7 +39,8 @@ public class TestScriptLogin extends BaseTestScript {
                         post("/v1/auth/password_o2").
                 then().
                         log().all().
-                        extract().response();
+                extract().
+                        response();
 
 
         String jsonAsString = response.asString();

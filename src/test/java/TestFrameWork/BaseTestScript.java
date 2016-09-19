@@ -15,7 +15,7 @@ public class BaseTestScript {
 
     PrintStream stdout;
 
-    @BeforeGroups(groups = {"local","test"})
+    @BeforeGroups(groups = {"local","test","ref"})
     //@BeforeClass(alwaysRun = true)
     public void setup() throws FileNotFoundException {
         stdout = System.out;
@@ -23,7 +23,7 @@ public class BaseTestScript {
         System.setOut(out);
     }
 
-    @BeforeMethod(groups = {"local","test"})
+    @BeforeMethod(groups = {"local","test","ref"})
     public void handleTestMethodName(Method method)
     {
         System.out.println();
@@ -32,7 +32,7 @@ public class BaseTestScript {
     }
 
 
-    @AfterGroups(groups = {"local","test"})
+    @AfterGroups(groups = {"local","test","ref"})
     public void teardown(){
         System.setOut(stdout);
     }

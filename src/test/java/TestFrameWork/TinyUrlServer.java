@@ -14,7 +14,7 @@ public class TinyUrlServer {
     public String createValidTinyUrl(String tinyUrl) {
 
         Properties responseBody = new Properties();
-        responseBody.setProperty("urlId", "urlId1");
+        responseBody.setProperty("urlId", "id1");
         responseBody.setProperty("tiny_url", tinyUrl);
 
         StubMethod method = StubMethod.put("/tinyurl");
@@ -29,7 +29,7 @@ public class TinyUrlServer {
 
     public void getValidTargetUrl(String id, String targetUrlIntended) {
         Properties responseBody = new Properties();
-        responseBody.setProperty("urlId", "urlId1");
+        responseBody.setProperty("urlId", "id1");
         responseBody.setProperty("target_url", targetUrlIntended);
 
         StubMethod method = StubMethod.get("/tinyurl/" + id);

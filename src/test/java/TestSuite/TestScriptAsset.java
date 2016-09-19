@@ -17,13 +17,13 @@ import static io.restassured.RestAssured.given;
 public class TestScriptAsset extends BaseTestScript {
 
 
-    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {"local","ref"})
-    public void testGetAllAssets(String username, String password){
+    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {})
+    public void testGetAllAssets(String env,String username, String password){
 
         HelperClass helper = new HelperClass();
-        String accessToken = helper.getTokenWithSignedinProof(username, password);
+        String accessToken = helper.getTokenWithSignedinProof(env,username, password);
 
-        Setup.setupPersonURL();
+        Setup.setupPersonURL(env);
         Response assetResponse =
                         given().
                                 log().all().
@@ -41,13 +41,13 @@ public class TestScriptAsset extends BaseTestScript {
     }
 
 
-    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {"local","ref"})
-    public void testGetPAYMAssetsUsingPathParam(String username, String password){
+    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {})
+    public void testGetPAYMAssetsUsingPathParam(String env,String username, String password){
 
         HelperClass helper = new HelperClass();
-        String accessToken = helper.getTokenWithSignedinProof(username, password);
+        String accessToken = helper.getTokenWithSignedinProof(env,username, password);
 
-        Setup.setupPersonURL();
+        Setup.setupPersonURL(env);
         Response assetResponse =
                 given().
                         log().all().
