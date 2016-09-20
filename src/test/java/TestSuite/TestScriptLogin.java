@@ -21,7 +21,7 @@ import static io.restassured.RestAssured.given;
 public class TestScriptLogin extends BaseTestScript {
 
 
-    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {"ref","local"})
+    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {})
     public void SuccessfulLogin(String env, String username, String password){
         Setup.setupAuthServerURL(env);
 

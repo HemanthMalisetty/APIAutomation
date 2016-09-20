@@ -19,26 +19,31 @@ public class VisualIVRTestSuite extends BaseTestScript {
     MessagingHelperClass msgsim;
     HelperClass helper;
     RestOperations restoperation;
+    Boolean enableTinyUrl = true;
 
-    @BeforeMethod(alwaysRun = true)
+    @BeforeMethod(groups = {"test","local"})
     public void setupTinyurlstub() {
-        tinyUrlServer = new TinyUrlServer();
-        tinyUrlServer.start();
+        if(enableTinyUrl){
+            tinyUrlServer = new TinyUrlServer();
+            tinyUrlServer.start();
+        }
         msgsim = new MessagingHelperClass();
         msgsim.clearHistory();
+    }
+
+    @AfterMethod(groups = {"test","local"})
+    public void tearDown() {
+        if(enableTinyUrl){
+            tinyUrlServer.stop();
+        }
+    }
+
+    @Test(dataProvider = "PAYMmsisdns", dataProviderClass = TestDataProvider.class,groups = {"ref"})
+    public void HappyPathEndtoEndScenario(String env,String phonenumber){
         helper = new HelperClass();
         restoperation = new RestOperations();
-    }
 
-    @AfterMethod(alwaysRun = true)
-    public void tearDown() {
-        tinyUrlServer.stop();
-    }
-
-    @Test(dataProvider = "PAYMmsisdns", dataProviderClass = TestDataProvider.class,groups = {})
-    public void HappyPathEndtoEndScenario(String env,String phonenumber){
-
-        if(env == "local" || env == "test"){
+        if((env == "local" || env == "test") && enableTinyUrl){
             tinyUrlServer.createValidTinyUrl("https://localhost.o2.co.uk:8443/credhandler/tinyurl/redeem/id1");
         }
 
@@ -91,28 +96,31 @@ public class VisualIVRTestSuite extends BaseTestScript {
         Map<String, Object> transfersessionResponsebody = transfersessionresponse.getBody().as(Map.class);
         String session_id = (String) transfersessionResponsebody.get("transfer_session_id");
 
-        String tinyRedeemUrl=null;
+        String redeemUrl=null;
+        Response redeemurlresponse;
+
         if(env == "local" || env == "test"){
             String smscontent = msgsim.getSMS(phonenumber);
-            tinyRedeemUrl = helper.getURLfromsms(smscontent);
+            redeemUrl = helper.getURLfromsms(smscontent);
         }else if(env == "ref"){
-            Scanner scanner = new Scanner (System.in);
-            System.out.println("Enter the redeem url you got in the sms : ");
-            tinyRedeemUrl = scanner.next();
+            redeemUrl = "https://identity.o2.co.uk/redeem/ts/" +session_id;
         }
 
+        if((env == "local" || env == "test") && enableTinyUrl){
+            String resolvedTargetUrl = "https://localhost.o2.co.uk:8443/credhandler/redeem/ts/" +session_id;
+            tinyUrlServer.getValidTargetUrl("id1", resolvedTargetUrl);
+        }
 
-        String resolvedTargetUrl = "https://localhost.o2.co.uk:8443/credhandler/redeem/ts/" +session_id;
-        tinyUrlServer.getValidTargetUrl("id1", resolvedTargetUrl);
+        if(enableTinyUrl){
+            redeemurlresponse = restoperation.getMethodWithRedirect(redeemUrl);
+            redeemUrl = redeemurlresponse.getHeader("Location");
+        }
 
-        Response redeemtinyurlresponse = restoperation.getMethodWithRedirect(tinyRedeemUrl);
-        String credRedeemUrl = redeemtinyurlresponse.getHeader("Location");
-
-        Response redeemtransfersessionresponse = restoperation.getMethodWithRedirect(credRedeemUrl);
-        String targetUrl = redeemtransfersessionresponse.getHeader("Location");
+        redeemurlresponse = restoperation.getMethodWithRedirect(redeemUrl);
+        String targetUrl = redeemurlresponse.getHeader("Location");
         System.out.println(targetUrl);
-        System.out.println(redeemtransfersessionresponse.getCookie("AUTH"));
-        Assert.assertTrue(helper.checkAuthCodeForProof(env,"user_id_signed_in",redeemtransfersessionresponse.getCookie("AUTH")),"Auth Cookie doesn't have sign in proof");
+        System.out.println(redeemurlresponse.getCookie("AUTH"));
+        Assert.assertTrue(helper.checkAuthCodeForProof(env,"user_id_signed_in",redeemurlresponse.getCookie("AUTH")),"Auth Cookie doesn't have sign in proof");
 
     }
 

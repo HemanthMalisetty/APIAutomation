@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Custom_suite">
-              <span class="suite-name border-passed">Custom suite</span>
+              <span class="suite-name border-failed">Custom suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,26 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Custom_suite" class="hide-methods passed suite-Custom_suite"> (hide)</a> <!-- hide-methods passed suite-Custom_suite -->
-                      <a href="#" panel-name="suite-Custom_suite" class="show-methods passed suite-Custom_suite"> (show)</a> <!-- show-methods passed suite-Custom_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Custom_suite" class="hide-methods failed suite-Custom_suite"> (hide)</a> <!-- hide-methods failed suite-Custom_suite -->
+                      <a href="#" panel-name="suite-Custom_suite" class="show-methods failed suite-Custom_suite"> (show)</a> <!-- show-methods failed suite-Custom_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Custom_suite">
+                    <div class="method-list-content failed suite-Custom_suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Custom_suite" title="TestSuite.PushNotificationAssetTestSuite" hash-for-method="CreatePUSHNOTIFICATIONasset(local, banky@hotmail.com, Password1)">CreatePUSHNOTIFICATIONasset(local, banky@hotmail.com, Password1)</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Custom_suite" title="TestSuite.VisualIVRTestSuite" hash-for-method="HappyPathEndtoEndScenario(ref, 447521005662)">HappyPathEndtoEndScenario(ref, 447521005662)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Custom_suite" title="TestSuite.PushNotificationAssetTestSuite" hash-for-method="CreatePUSHNOTIFICATIONasset(local, fun-notverified@o2.co.uk, Password1)">CreatePUSHNOTIFICATIONasset(local, fun-notverified@o2.co.uk, Password1)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Custom_suite -->
+                    </div> <!-- method-list-content failed suite-Custom_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -121,30 +116,51 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Custom_suite" class="panel Custom_suite">
-          <div class="suite-Custom_suite-class-passed">
+          <div class="suite-Custom_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">TestSuite.PushNotificationAssetTestSuite</span>
+              <img src="failed.png"/>
+              <span class="class-name">TestSuite.VisualIVRTestSuite</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CreatePUSHNOTIFICATIONasset(local, banky@hotmail.com, Password1)">
-                  </a> <!-- CreatePUSHNOTIFICATIONasset(local, banky@hotmail.com, Password1) -->
-                  <span class="method-name">CreatePUSHNOTIFICATIONasset</span>
-                  <span class="parameters">(local, banky@hotmail.com, Password1)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="CreatePUSHNOTIFICATIONasset(local, fun-notverified@o2.co.uk, Password1)">
-                  </a> <!-- CreatePUSHNOTIFICATIONasset(local, fun-notverified@o2.co.uk, Password1) -->
-                  <span class="method-name">CreatePUSHNOTIFICATIONasset</span>
-                  <span class="parameters">(local, fun-notverified@o2.co.uk, Password1)</span>
+                  <a name="HappyPathEndtoEndScenario(ref, 447521005662)">
+                  </a> <!-- HappyPathEndtoEndScenario(ref, 447521005662) -->
+                  <span class="method-name">HappyPathEndtoEndScenario</span>
+                  <span class="parameters">(ref, 447521005662)</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; doesn&apos;t match actual status code &lt;502&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:451)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:613)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:120)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:117)
+	at TestSuite.VisualIVRTestSuite.HappyPathEndtoEndScenario(VisualIVRTestSuite.java:66)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+... Removed 39 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Custom_suite-class-passed -->
+          </div> <!-- suite-Custom_suite-class-failed -->
         </div> <!-- panel Custom_suite -->
         <div panel-name="test-xml-Custom_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -155,10 +171,11 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Custom suite&quot; parallel=&quot;none&quot;&gt;
+  &lt;parameter name=&quot;env&quot; value=&quot;ref&quot;/&gt;
   &lt;test name=&quot;APIautomation&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
-        &lt;include name=&quot;test&quot;/&gt;
+        &lt;include name=&quot;ref&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
@@ -194,10 +211,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">test</span>
+              <span class="test-group-name">ref</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">CreatePUSHNOTIFICATIONasset</span>
+                <span class="method-in-group-name">HappyPathEndtoEndScenario</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -217,20 +234,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'CreatePUSHNOTIFICATIONasset')
-data.setCell(0, 2, 'TestSuite.PushNotificationAssetTestSuite')
-data.setCell(0, 3, 2355);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'CreatePUSHNOTIFICATIONasset')
-data.setCell(1, 2, 'TestSuite.PushNotificationAssetTestSuite')
-data.setCell(1, 3, 465);
+data.setCell(0, 1, 'HappyPathEndtoEndScenario')
+data.setCell(0, 2, 'TestSuite.VisualIVRTestSuite')
+data.setCell(0, 3, 12370);
 window.suiteTableData['Custom_suite']= { tableData: data, tableDiv: 'times-div-Custom_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Custom_suite">
               </div> <!-- times-div-Custom_suite -->
             </div> <!-- times-div -->
@@ -241,75 +254,13 @@ return data;
             <span class="header-content">Reporter output for Custom suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">CreatePUSHNOTIFICATIONasset(local, banky@hotmail.com, Password1)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">REQUEST: </span>
-                <span class="reporter-method-output">{password=Password1, preferred_username=banky@hotmail.com}</span>
-                <span class="reporter-method-output">RESPONSE: </span>
-                <span class="reporter-method-output">{"auth_cookie_code":"f8eee698-9a32-48e3-b2d2-4e53247a76f1","legacy_o2at_code":"08f1de8c-4a8b-4803-95c3-aac44d5e245d","legacy_portal_account_cookie_info":{"master_portal_bfid":"130000000272551","master_portal_id":"banky","master_portal_display_name":"richard"},"irrelevant_proof_added":false}</span>
-                <span class="reporter-method-output">REQUEST: </span>
-                <span class="reporter-method-output">{code=f8eee698-9a32-48e3-b2d2-4e53247a76f1, grant_type=auth_cookie, scope=[openid, profile, email, phone, otac]}</span>
-                <span class="reporter-method-output">RESPONSE: </span>
-                <span class="reporter-method-output">{"access_token":"c7411926-161d-49b9-a91a-589c3dba8379","refresh_token":"d13117a5-df59-4260-989a-1864a82293e1","token_type":"Bearer","expires_in":59,"authentication_time":"2016-09-19T08:12:51.659Z"}</span>
-                <span class="reporter-method-output">REQUEST: </span>
-                <span class="reporter-method-output">RESPONSE: </span>
-                <span class="reporter-method-output">[{"asset_type":"PUSHNOTIFICATION","asset_value":"30d85ad1-b2d6-4351-b86b-efa877897f24"}]</span>
-                <span class="reporter-method-output">REQUEST: </span>
-                <span class="reporter-method-output">RESPONSE: </span>
-                <span class="reporter-method-output"></span>
-                <span class="reporter-method-output">REQUEST: </span>
-                <span class="reporter-method-output">RESPONSE: </span>
-                <span class="reporter-method-output">{"asset_type":"PUSHNOTIFICATION","asset_value":"2db005fc-e37e-4451-89b9-c7e35031b71f"}</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">CreatePUSHNOTIFICATIONasset(local, fun-notverified@o2.co.uk, Password1)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">REQUEST: </span>
-                <span class="reporter-method-output">{password=Password1, preferred_username=fun-notverified@o2.co.uk}</span>
-                <span class="reporter-method-output">RESPONSE: </span>
-                <span class="reporter-method-output">{"auth_cookie_code":"6f369aef-cdfe-4983-b9e6-f028534fb8d9","legacy_o2at_code":"feff92b1-0e9c-4347-b41f-941f42db2ac3","legacy_portal_account_cookie_info":{"master_portal_bfid":"9990000001","master_portal_id":"fun-notverified","master_portal_display_name":"fun-notverified"},"irrelevant_proof_added":false}</span>
-                <span class="reporter-method-output">REQUEST: </span>
-                <span class="reporter-method-output">{code=6f369aef-cdfe-4983-b9e6-f028534fb8d9, grant_type=auth_cookie, scope=[openid, profile, email, phone, otac]}</span>
-                <span class="reporter-method-output">RESPONSE: </span>
-                <span class="reporter-method-output">{"access_token":"e2d0545a-e727-4fe9-b5cb-468641c1e9ae","refresh_token":"b0e9090c-0073-4b72-b6a1-82f036d57f12","token_type":"Bearer","expires_in":59,"authentication_time":"2016-09-19T08:12:52.342Z"}</span>
-                <span class="reporter-method-output">REQUEST: </span>
-                <span class="reporter-method-output">RESPONSE: </span>
-                <span class="reporter-method-output">[{"asset_type":"PUSHNOTIFICATION","asset_value":"69ffc9cc-f78c-44ac-b139-ec8752b4c4b4"}]</span>
-                <span class="reporter-method-output">REQUEST: </span>
-                <span class="reporter-method-output">RESPONSE: </span>
-                <span class="reporter-method-output"></span>
-                <span class="reporter-method-output">REQUEST: </span>
-                <span class="reporter-method-output">RESPONSE: </span>
-                <span class="reporter-method-output">{"asset_type":"PUSHNOTIFICATION","asset_value":"e7bb9cde-d9a4-4b62-9748-8a8d2b59d2ab"}</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Custom_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">9 ignored methods</span>
+            <span class="header-content">10 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">TestSuite.O2OPENAssetTestSuite</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">DeleteO2OPENasset</span>
-                <br/>
-                <span class="ignored-method-name">CreateO2OPENasset</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">TestSuite.VisualIVRTestSuite</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">CreateTokenforVerifiedCustomer</span>
-                <br/>
-                <span class="ignored-method-name">HappyPathEndtoEndScenario</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">TestSuite.TestScriptAsset</span>
               <div class="ignored-methods-div">
@@ -320,9 +271,11 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">SampleTestWithTestNG</span>
+              <span class="ignored-class-name">TestSuite.O2OPENAssetTestSuite</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">testLogin</span>
+                <span class="ignored-method-name">DeleteO2OPENasset</span>
+                <br/>
+                <span class="ignored-method-name">CreateO2OPENasset</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -334,9 +287,27 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
+              <span class="ignored-class-name">SampleTestWithTestNG</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">testLogin</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestSuite.VisualIVRTestSuite</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">CreateTokenforVerifiedCustomer</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
               <span class="ignored-class-name">TestSuite.PushNotificationAssetTestSuite</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">DeletePUSHNOTIFICATIONasset</span>
+                <br/>
+                <span class="ignored-method-name">OneAssetPerIdentityRuleForPUSHNOTIFICATIONasset</span>
+                <br/>
+                <span class="ignored-method-name">CreatePUSHNOTIFICATIONasset</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -348,44 +319,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestSuite.O2OPENAssetTestSuite</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestFrameWork.BaseTestScript</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">TestSuite.PushNotificationAssetTestSuite</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestSuite.VisualIVRTestSuite</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">handleTestMethodName(public void TestSuite.PushNotificationAssetTestSuite.CreatePUSHNOTIFICATIONasset(java.lang.String,ja...)</span>
+                <span class="method-name">handleTestMethodName(public void TestSuite.VisualIVRTestSuite.HappyPathEndtoEndScenario(java.lang.String,java.lang.String...)</span>
                 <span class="method-start">5 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">setupTest</span>
-                <span class="method-start">6 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">CreatePUSHNOTIFICATIONasset(local, banky@hotmail.com, Password1)</span>
-                <span class="method-start">7 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">handleTestMethodName(public void TestSuite.PushNotificationAssetTestSuite.CreatePUSHNOTIFICATIONasset(java.lang.String,ja...)</span>
-                <span class="method-start">2363 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">setupTest</span>
-                <span class="method-start">2363 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">CreatePUSHNOTIFICATIONasset(local, fun-notverified@o2.co.uk, Password1)</span>
-                <span class="method-start">2363 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">HappyPathEndtoEndScenario(ref, 447521005662)</span>
+                <span class="method-start">5 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">TestSuite.O2OPENAssetTestSuite</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestFrameWork.BaseTestScript</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">teardown</span>
-                <span class="method-start">2830 ms</span>
+                <span class="method-start">12377 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

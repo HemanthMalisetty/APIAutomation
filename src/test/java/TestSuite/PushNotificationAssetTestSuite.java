@@ -24,16 +24,30 @@ public class PushNotificationAssetTestSuite extends BaseTestScript {
         helper = new HelperClass();
     }
 
-    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {"test"})
+    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {})
     public void CreatePUSHNOTIFICATIONasset(String env,String username, String password){
-        Map<String, Object> createAssetRequestBody = new HashMap<>();
-        Response createAssetResponse = assethelper.createAssetWithoutAssetIDLoggedin(env,username,password,"PUSHNOTIFICATION",createAssetRequestBody);
+        String accessToken = helper.getTokenWithSignedinProof(env,username,password);
+        assethelper.deleteAllAssetByAssetType(env,accessToken,"PUSHNOTIFICATION");
+        Response createAssetResponse = assethelper.createAssetWithoutAssetIDLoggedin(env,accessToken,"PUSHNOTIFICATION",new HashMap<>());
         Assert.assertEquals(createAssetResponse.getStatusCode(), 200);
     }
 
     @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {})
+    public void OneAssetPerIdentityRuleForPUSHNOTIFICATIONasset(String env,String username, String password){
+        String accessToken = helper.getTokenWithSignedinProof(env,username,password);
+        assethelper.deleteAllAssetByAssetType(env,accessToken,"PUSHNOTIFICATION");
+        Response createAssetResponse = assethelper.createAssetWithoutAssetIDLoggedin(env, accessToken, "PUSHNOTIFICATION", new HashMap<>());
+        Assert.assertEquals(createAssetResponse.getStatusCode(), 200);
+        Response createAssetResponse1 = assethelper.createAssetWithoutAssetIDLoggedin(env,accessToken,"PUSHNOTIFICATION",new HashMap<>());
+        Assert.assertEquals(createAssetResponse1.getStatusCode(), 409);
+        Assert.assertEquals(createAssetResponse1.getBody().as(Map.class).get("error"), "asset_creation_limit_reached");
+    }
+
+    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {})
     public void DeletePUSHNOTIFICATIONasset(String env,String username, String password){
-        Response deleteAssetResponse = assethelper.deleteAssetLoggedin(env, username, password, "PUSHNOTIFICATION", helper.generateRandomString());
+        String assetIdToDelete = helper.generateRandomString();
+        assethelper.createAssetIfNotPresent(env,username,password,"PUSHNOTIFICATION",assetIdToDelete);
+        Response deleteAssetResponse = assethelper.deleteAssetNonLoggedin(env, "PUSHNOTIFICATION", assetIdToDelete);
         Assert.assertEquals(deleteAssetResponse.getStatusCode(),204);
     }
 

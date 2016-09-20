@@ -1,302 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
-    <line>
-      <![CDATA[REQUEST: ]]>
-    </line>
-    <line>
-      <![CDATA[{password=Password1, preferred_username=banky@hotmail.com}]]>
-    </line>
-    <line>
-      <![CDATA[RESPONSE: ]]>
-    </line>
-    <line>
-      <![CDATA[{"auth_cookie_code":"f8eee698-9a32-48e3-b2d2-4e53247a76f1","legacy_o2at_code":"08f1de8c-4a8b-4803-95c3-aac44d5e245d","legacy_portal_account_cookie_info":{"master_portal_bfid":"130000000272551","master_portal_id":"banky","master_portal_display_name":"richard"},"irrelevant_proof_added":false}]]>
-    </line>
-    <line>
-      <![CDATA[REQUEST: ]]>
-    </line>
-    <line>
-      <![CDATA[{code=f8eee698-9a32-48e3-b2d2-4e53247a76f1, grant_type=auth_cookie, scope=[openid, profile, email, phone, otac]}]]>
-    </line>
-    <line>
-      <![CDATA[RESPONSE: ]]>
-    </line>
-    <line>
-      <![CDATA[{"access_token":"c7411926-161d-49b9-a91a-589c3dba8379","refresh_token":"d13117a5-df59-4260-989a-1864a82293e1","token_type":"Bearer","expires_in":59,"authentication_time":"2016-09-19T08:12:51.659Z"}]]>
-    </line>
-    <line>
-      <![CDATA[REQUEST: ]]>
-    </line>
-    <line>
-      <![CDATA[RESPONSE: ]]>
-    </line>
-    <line>
-      <![CDATA[[{"asset_type":"PUSHNOTIFICATION","asset_value":"30d85ad1-b2d6-4351-b86b-efa877897f24"}]]]>
-    </line>
-    <line>
-      <![CDATA[REQUEST: ]]>
-    </line>
-    <line>
-      <![CDATA[RESPONSE: ]]>
-    </line>
-    <line>
-      <![CDATA[]]>
-    </line>
-    <line>
-      <![CDATA[REQUEST: ]]>
-    </line>
-    <line>
-      <![CDATA[RESPONSE: ]]>
-    </line>
-    <line>
-      <![CDATA[{"asset_type":"PUSHNOTIFICATION","asset_value":"2db005fc-e37e-4451-89b9-c7e35031b71f"}]]>
-    </line>
-    <line>
-      <![CDATA[REQUEST: ]]>
-    </line>
-    <line>
-      <![CDATA[{password=Password1, preferred_username=fun-notverified@o2.co.uk}]]>
-    </line>
-    <line>
-      <![CDATA[RESPONSE: ]]>
-    </line>
-    <line>
-      <![CDATA[{"auth_cookie_code":"6f369aef-cdfe-4983-b9e6-f028534fb8d9","legacy_o2at_code":"feff92b1-0e9c-4347-b41f-941f42db2ac3","legacy_portal_account_cookie_info":{"master_portal_bfid":"9990000001","master_portal_id":"fun-notverified","master_portal_display_name":"fun-notverified"},"irrelevant_proof_added":false}]]>
-    </line>
-    <line>
-      <![CDATA[REQUEST: ]]>
-    </line>
-    <line>
-      <![CDATA[{code=6f369aef-cdfe-4983-b9e6-f028534fb8d9, grant_type=auth_cookie, scope=[openid, profile, email, phone, otac]}]]>
-    </line>
-    <line>
-      <![CDATA[RESPONSE: ]]>
-    </line>
-    <line>
-      <![CDATA[{"access_token":"e2d0545a-e727-4fe9-b5cb-468641c1e9ae","refresh_token":"b0e9090c-0073-4b72-b6a1-82f036d57f12","token_type":"Bearer","expires_in":59,"authentication_time":"2016-09-19T08:12:52.342Z"}]]>
-    </line>
-    <line>
-      <![CDATA[REQUEST: ]]>
-    </line>
-    <line>
-      <![CDATA[RESPONSE: ]]>
-    </line>
-    <line>
-      <![CDATA[[{"asset_type":"PUSHNOTIFICATION","asset_value":"69ffc9cc-f78c-44ac-b139-ec8752b4c4b4"}]]]>
-    </line>
-    <line>
-      <![CDATA[REQUEST: ]]>
-    </line>
-    <line>
-      <![CDATA[RESPONSE: ]]>
-    </line>
-    <line>
-      <![CDATA[]]>
-    </line>
-    <line>
-      <![CDATA[REQUEST: ]]>
-    </line>
-    <line>
-      <![CDATA[RESPONSE: ]]>
-    </line>
-    <line>
-      <![CDATA[{"asset_type":"PUSHNOTIFICATION","asset_value":"e7bb9cde-d9a4-4b62-9748-8a8d2b59d2ab"}]]>
-    </line>
   </reporter-output>
-  <suite name="Custom suite" duration-ms="2842" started-at="2016-09-19T08:12:49Z" finished-at="2016-09-19T08:12:52Z">
+  <suite name="Custom suite" duration-ms="12389" started-at="2016-09-20T08:10:14Z" finished-at="2016-09-20T08:10:26Z">
     <groups>
-      <group name="test">
-        <method signature="PushNotificationAssetTestSuite.CreatePUSHNOTIFICATIONasset(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestSuite.PushNotificationAssetTestSuite@35bbe5e8]" name="CreatePUSHNOTIFICATIONasset" class="TestSuite.PushNotificationAssetTestSuite"/>
-      </group> <!-- test -->
+      <group name="ref">
+        <method signature="VisualIVRTestSuite.HappyPathEndtoEndScenario(java.lang.String, java.lang.String)[pri:0, instance:TestSuite.VisualIVRTestSuite@5a39699c]" name="HappyPathEndtoEndScenario" class="TestSuite.VisualIVRTestSuite"/>
+      </group> <!-- ref -->
     </groups>
-    <test name="APIautomation" duration-ms="2842" started-at="2016-09-19T08:12:49Z" finished-at="2016-09-19T08:12:52Z">
-      <class name="TestSuite.O2OPENAssetTestSuite">
-        <test-method status="PASS" signature="setup()[pri:0, instance:TestSuite.O2OPENAssetTestSuite@ea4a92b]" name="setup" is-config="true" duration-ms="5" started-at="2016-09-19T09:12:49Z" finished-at="2016-09-19T09:12:49Z">
+    <test name="APIautomation" duration-ms="12389" started-at="2016-09-20T08:10:14Z" finished-at="2016-09-20T08:10:26Z">
+      <class name="TestFrameWork.BaseTestScript">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestFrameWork.BaseTestScript@7e0babb1]" name="setup" is-config="true" duration-ms="5" started-at="2016-09-20T09:10:14Z" finished-at="2016-09-20T09:10:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:TestSuite.O2OPENAssetTestSuite@ea4a92b]" name="teardown" is-config="true" duration-ms="0" started-at="2016-09-19T09:12:52Z" finished-at="2016-09-19T09:12:52Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestFrameWork.BaseTestScript@7e0babb1]" name="teardown" is-config="true" duration-ms="0" started-at="2016-09-20T09:10:26Z" finished-at="2016-09-20T09:10:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- TestSuite.O2OPENAssetTestSuite -->
-      <class name="TestSuite.PushNotificationAssetTestSuite">
-        <test-method status="PASS" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:TestSuite.PushNotificationAssetTestSuite@35bbe5e8]" name="handleTestMethodName" is-config="true" duration-ms="1" started-at="2016-09-19T09:12:49Z" finished-at="2016-09-19T09:12:49Z">
+      </class> <!-- TestFrameWork.BaseTestScript -->
+      <class name="TestSuite.VisualIVRTestSuite">
+        <test-method status="FAIL" signature="HappyPathEndtoEndScenario(java.lang.String, java.lang.String)[pri:0, instance:TestSuite.VisualIVRTestSuite@5a39699c]" name="HappyPathEndtoEndScenario" duration-ms="12370" started-at="2016-09-20T09:10:14Z" data-provider="PAYMmsisdns" finished-at="2016-09-20T09:10:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void TestSuite.PushNotificationAssetTestSuite.CreatePUSHNOTIFICATIONasset(java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[ref]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[447521005662]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <200> doesn't match actual status code <502>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> doesn't match actual status code <502>.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:451)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:613)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:120)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:117)
+	at TestSuite.VisualIVRTestSuite.HappyPathEndtoEndScenario(VisualIVRTestSuite.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HappyPathEndtoEndScenario -->
+        <test-method status="PASS" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:TestSuite.VisualIVRTestSuite@5a39699c]" name="handleTestMethodName" is-config="true" duration-ms="0" started-at="2016-09-20T09:10:14Z" finished-at="2016-09-20T09:10:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestSuite.VisualIVRTestSuite.HappyPathEndtoEndScenario(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- handleTestMethodName -->
-        <test-method status="PASS" signature="setupTest()[pri:0, instance:TestSuite.PushNotificationAssetTestSuite@35bbe5e8]" name="setupTest" is-config="true" duration-ms="1" started-at="2016-09-19T09:12:49Z" finished-at="2016-09-19T09:12:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupTest -->
-        <test-method status="PASS" signature="CreatePUSHNOTIFICATIONasset(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestSuite.PushNotificationAssetTestSuite@35bbe5e8]" name="CreatePUSHNOTIFICATIONasset" duration-ms="2355" started-at="2016-09-19T09:12:49Z" data-provider="userCredential" finished-at="2016-09-19T09:12:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[local]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[banky@hotmail.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Password1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[REQUEST: ]]>
-            </line>
-            <line>
-              <![CDATA[{password=Password1, preferred_username=banky@hotmail.com}]]>
-            </line>
-            <line>
-              <![CDATA[RESPONSE: ]]>
-            </line>
-            <line>
-              <![CDATA[{"auth_cookie_code":"f8eee698-9a32-48e3-b2d2-4e53247a76f1","legacy_o2at_code":"08f1de8c-4a8b-4803-95c3-aac44d5e245d","legacy_portal_account_cookie_info":{"master_portal_bfid":"130000000272551","master_portal_id":"banky","master_portal_display_name":"richard"},"irrelevant_proof_added":false}]]>
-            </line>
-            <line>
-              <![CDATA[REQUEST: ]]>
-            </line>
-            <line>
-              <![CDATA[{code=f8eee698-9a32-48e3-b2d2-4e53247a76f1, grant_type=auth_cookie, scope=[openid, profile, email, phone, otac]}]]>
-            </line>
-            <line>
-              <![CDATA[RESPONSE: ]]>
-            </line>
-            <line>
-              <![CDATA[{"access_token":"c7411926-161d-49b9-a91a-589c3dba8379","refresh_token":"d13117a5-df59-4260-989a-1864a82293e1","token_type":"Bearer","expires_in":59,"authentication_time":"2016-09-19T08:12:51.659Z"}]]>
-            </line>
-            <line>
-              <![CDATA[REQUEST: ]]>
-            </line>
-            <line>
-              <![CDATA[RESPONSE: ]]>
-            </line>
-            <line>
-              <![CDATA[[{"asset_type":"PUSHNOTIFICATION","asset_value":"30d85ad1-b2d6-4351-b86b-efa877897f24"}]]]>
-            </line>
-            <line>
-              <![CDATA[REQUEST: ]]>
-            </line>
-            <line>
-              <![CDATA[RESPONSE: ]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[REQUEST: ]]>
-            </line>
-            <line>
-              <![CDATA[RESPONSE: ]]>
-            </line>
-            <line>
-              <![CDATA[{"asset_type":"PUSHNOTIFICATION","asset_value":"2db005fc-e37e-4451-89b9-c7e35031b71f"}]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- CreatePUSHNOTIFICATIONasset -->
-        <test-method status="PASS" signature="CreatePUSHNOTIFICATIONasset(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestSuite.PushNotificationAssetTestSuite@35bbe5e8]" name="CreatePUSHNOTIFICATIONasset" duration-ms="465" started-at="2016-09-19T09:12:52Z" data-provider="userCredential" finished-at="2016-09-19T09:12:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[local]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[fun-notverified@o2.co.uk]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Password1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[REQUEST: ]]>
-            </line>
-            <line>
-              <![CDATA[{password=Password1, preferred_username=fun-notverified@o2.co.uk}]]>
-            </line>
-            <line>
-              <![CDATA[RESPONSE: ]]>
-            </line>
-            <line>
-              <![CDATA[{"auth_cookie_code":"6f369aef-cdfe-4983-b9e6-f028534fb8d9","legacy_o2at_code":"feff92b1-0e9c-4347-b41f-941f42db2ac3","legacy_portal_account_cookie_info":{"master_portal_bfid":"9990000001","master_portal_id":"fun-notverified","master_portal_display_name":"fun-notverified"},"irrelevant_proof_added":false}]]>
-            </line>
-            <line>
-              <![CDATA[REQUEST: ]]>
-            </line>
-            <line>
-              <![CDATA[{code=6f369aef-cdfe-4983-b9e6-f028534fb8d9, grant_type=auth_cookie, scope=[openid, profile, email, phone, otac]}]]>
-            </line>
-            <line>
-              <![CDATA[RESPONSE: ]]>
-            </line>
-            <line>
-              <![CDATA[{"access_token":"e2d0545a-e727-4fe9-b5cb-468641c1e9ae","refresh_token":"b0e9090c-0073-4b72-b6a1-82f036d57f12","token_type":"Bearer","expires_in":59,"authentication_time":"2016-09-19T08:12:52.342Z"}]]>
-            </line>
-            <line>
-              <![CDATA[REQUEST: ]]>
-            </line>
-            <line>
-              <![CDATA[RESPONSE: ]]>
-            </line>
-            <line>
-              <![CDATA[[{"asset_type":"PUSHNOTIFICATION","asset_value":"69ffc9cc-f78c-44ac-b139-ec8752b4c4b4"}]]]>
-            </line>
-            <line>
-              <![CDATA[REQUEST: ]]>
-            </line>
-            <line>
-              <![CDATA[RESPONSE: ]]>
-            </line>
-            <line>
-              <![CDATA[]]>
-            </line>
-            <line>
-              <![CDATA[REQUEST: ]]>
-            </line>
-            <line>
-              <![CDATA[RESPONSE: ]]>
-            </line>
-            <line>
-              <![CDATA[{"asset_type":"PUSHNOTIFICATION","asset_value":"e7bb9cde-d9a4-4b62-9748-8a8d2b59d2ab"}]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- CreatePUSHNOTIFICATIONasset -->
-        <test-method status="PASS" signature="setupTest()[pri:0, instance:TestSuite.PushNotificationAssetTestSuite@35bbe5e8]" name="setupTest" is-config="true" duration-ms="0" started-at="2016-09-19T09:12:52Z" finished-at="2016-09-19T09:12:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupTest -->
-        <test-method status="PASS" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:TestSuite.PushNotificationAssetTestSuite@35bbe5e8]" name="handleTestMethodName" is-config="true" duration-ms="0" started-at="2016-09-19T09:12:52Z" finished-at="2016-09-19T09:12:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void TestSuite.PushNotificationAssetTestSuite.CreatePUSHNOTIFICATIONasset(java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- handleTestMethodName -->
-      </class> <!-- TestSuite.PushNotificationAssetTestSuite -->
+      </class> <!-- TestSuite.VisualIVRTestSuite -->
     </test> <!-- APIautomation -->
   </suite> <!-- Custom suite -->
 </testng-results>
