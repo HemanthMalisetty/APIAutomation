@@ -24,7 +24,7 @@ public class PushNotificationAssetTestSuite extends BaseTestScript {
         helper = new HelperClass();
     }
 
-    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {})
+    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {"ref"})
     public void CreatePUSHNOTIFICATIONasset(String env,String username, String password){
         String accessToken = helper.getTokenWithSignedinProof(env,username,password);
         assethelper.deleteAllAssetByAssetType(env,accessToken,"PUSHNOTIFICATION");
@@ -32,7 +32,7 @@ public class PushNotificationAssetTestSuite extends BaseTestScript {
         Assert.assertEquals(createAssetResponse.getStatusCode(), 200);
     }
 
-    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {})
+    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {"ref"})
     public void OneAssetPerIdentityRuleForPUSHNOTIFICATIONasset(String env,String username, String password){
         String accessToken = helper.getTokenWithSignedinProof(env,username,password);
         assethelper.deleteAllAssetByAssetType(env,accessToken,"PUSHNOTIFICATION");
@@ -43,8 +43,8 @@ public class PushNotificationAssetTestSuite extends BaseTestScript {
         Assert.assertEquals(createAssetResponse1.getBody().as(Map.class).get("error"), "asset_creation_limit_reached");
     }
 
-    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {})
-    public void DeletePUSHNOTIFICATIONasset(String env,String username, String password){
+    @Test(dataProvider = "userCredential", dataProviderClass = TestDataProvider.class,groups = {"ref"})
+    public void DirectDeletePUSHNOTIFICATIONasset(String env,String username, String password){
         String assetIdToDelete = helper.generateRandomString();
         assethelper.createAssetIfNotPresent(env,username,password,"PUSHNOTIFICATION",assetIdToDelete);
         Response deleteAssetResponse = assethelper.deleteAssetNonLoggedin(env, "PUSHNOTIFICATION", assetIdToDelete);

@@ -19,7 +19,7 @@ public class VisualIVRTestSuite extends BaseTestScript {
     MessagingHelperClass msgsim;
     HelperClass helper;
     RestOperations restoperation;
-    Boolean enableTinyUrl = true;
+    Boolean enableTinyUrl = false;
 
     @BeforeMethod(groups = {"test","local"})
     public void setupTinyurlstub() {
@@ -103,7 +103,7 @@ public class VisualIVRTestSuite extends BaseTestScript {
             String smscontent = msgsim.getSMS(phonenumber);
             redeemUrl = helper.getURLfromsms(smscontent);
         }else if(env == "ref"){
-            redeemUrl = "https://identity.o2.co.uk/redeem/ts/" +session_id;
+            redeemUrl = "https://identity.ref.o2.co.uk/redeem/ts/" +session_id;
         }
 
         if((env == "local" || env == "test") && enableTinyUrl){

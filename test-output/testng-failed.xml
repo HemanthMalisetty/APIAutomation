@@ -9,16 +9,24 @@
       </run>
     </groups>
     <classes>
-      <class name="TestFrameWork.BaseTestScript">
+      <class name="TestSuite.O2OPENAssetTestSuite">
         <methods>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- TestFrameWork.BaseTestScript -->
+      </class> <!-- TestSuite.O2OPENAssetTestSuite -->
+      <class name="TestSuite.PushNotificationAssetTestSuite">
+        <methods>
+          <include name="handleTestMethodName"/>
+          <include name="DirectDeletePUSHNOTIFICATIONasset" invocation-numbers="0"/>
+          <include name="setupTest"/>
+          <include name="OneAssetPerIdentityRuleForPUSHNOTIFICATIONasset" invocation-numbers="0"/>
+          <include name="CreatePUSHNOTIFICATIONasset" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- TestSuite.PushNotificationAssetTestSuite -->
       <class name="TestSuite.VisualIVRTestSuite">
         <methods>
           <include name="handleTestMethodName"/>
-          <include name="HappyPathEndtoEndScenario" invocation-numbers="0"/>
         </methods>
       </class> <!-- TestSuite.VisualIVRTestSuite -->
     </classes>
